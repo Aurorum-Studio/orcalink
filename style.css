@@ -1,0 +1,223 @@
+:root {
+  color-scheme: dark;
+  font-family: "Aptos", "Segoe UI", system-ui, sans-serif;
+  background: #091218;
+  color: #f2f8f8;
+  --muted: #a8bac4;
+  --accent: #a2e1d7;
+  --border: #263c46;
+}
+
+* { box-sizing: border-box; }
+[hidden] { display: none !important; }
+
+body {
+  margin: 0;
+  min-height: 100svh;
+  background: radial-gradient(ellipse 780px 580px at 50% 4%, #19323d 0%, #091218 88%);
+}
+
+.page {
+  width: min(100% - 2.25rem, 37rem);
+  margin-inline: auto;
+  padding-block: clamp(1.5rem, 7vh, 5rem) 4rem;
+}
+
+.profile {
+  overflow: hidden;
+  border: 1px solid var(--border);
+  border-radius: 1.5rem;
+  background: linear-gradient(145deg, #182b35, #101e26 70%);
+  box-shadow: 0 18px 60px #02080b55;
+}
+
+.cover {
+  position: relative;
+  height: clamp(9.75rem, 36vw, 14.5rem);
+  background: #24414c;
+}
+
+.cover img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center 53%;
+}
+
+.cover::after {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(0deg, #0a1b25a6, transparent 65%);
+  content: "";
+}
+
+.profile-info {
+  position: relative;
+  padding: 1.65rem clamp(1.15rem, 5vw, 2rem) 1.8rem;
+}
+
+.cover:not([hidden]) + .profile-info { padding-top: 0; }
+
+.avatar {
+  position: relative;
+  display: grid;
+  place-items: center;
+  width: 4rem;
+  height: 4rem;
+  margin-bottom: .75rem;
+  overflow: hidden;
+  border: 1px solid #b5eee2;
+  border-radius: 1.15rem;
+  background: linear-gradient(140deg, #d5f5eb, #85c9c4);
+  color: #15363e;
+  font-size: 2rem;
+  font-weight: 750;
+  box-shadow: 0 4px 20px #04141b66;
+}
+
+.cover:not([hidden]) + .profile-info .avatar { margin-top: -2rem; }
+
+.avatar img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+h1 {
+  margin: 0;
+  font-size: clamp(2.45rem, 10vw, 3.4rem);
+  line-height: 1.02;
+  letter-spacing: -.058em;
+  font-weight: 740;
+  overflow-wrap: anywhere;
+}
+
+#bio {
+  margin: .7rem 0 0;
+  color: var(--muted);
+  font-size: 1rem;
+  line-height: 1.5;
+  white-space: pre-line;
+  overflow-wrap: anywhere;
+}
+
+.links {
+  display: grid;
+  gap: .65rem;
+  margin: 1.25rem 0 0;
+  padding: 0;
+  list-style: none;
+}
+
+.link {
+  display: grid;
+  grid-template-columns: 2.6rem minmax(0, 1fr) 1.2rem;
+  align-items: center;
+  gap: .9rem;
+  min-height: 4.65rem;
+  padding: .7rem 1rem;
+  border: 1px solid var(--border);
+  border-radius: 1rem;
+  background: #12222b;
+  color: inherit;
+  text-decoration: none;
+  transition: background-color .15s, border-color .15s;
+}
+
+.link:hover {
+  background: #192f39;
+  border-color: #567d83;
+}
+
+.link:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 3px;
+}
+
+.link-copy {
+  display: grid;
+  gap: .18rem;
+  line-height: 1.35;
+  overflow-wrap: anywhere;
+}
+
+.link-title { font-weight: 650; }
+.link-description { color: var(--muted); font-size: .86rem; }
+.link-arrow {
+  justify-self: center;
+  width: .45rem;
+  height: .45rem;
+  transform: rotate(45deg);
+  border-top: 1.5px solid var(--accent);
+  border-right: 1.5px solid var(--accent);
+}
+
+.icon {
+  display: grid;
+  place-items: center;
+  width: 2.6rem;
+  height: 2.6rem;
+  border-radius: .68rem;
+  background: #203942;
+  color: var(--accent);
+}
+
+.icon-default::before {
+  width: .55rem;
+  height: .55rem;
+  border: 1.5px solid currentColor;
+  border-radius: 50%;
+  content: "";
+}
+
+.icon-code { font: 650 .85rem ui-monospace, monospace; }
+
+.icon-globe::before {
+  grid-area: 1 / 1;
+  width: .9rem;
+  height: .9rem;
+  border: 1.5px solid currentColor;
+  border-radius: 50%;
+  content: "";
+}
+
+.icon-globe::after {
+  grid-area: 1 / 1;
+  width: .35rem;
+  height: .9rem;
+  border-inline: 1.5px solid currentColor;
+  border-radius: 50%;
+  background: linear-gradient(currentColor, currentColor) center / 100% 1.5px no-repeat;
+  content: "";
+}
+
+.icon-guide::before {
+  grid-area: 1 / 1;
+  width: .7rem;
+  height: .875rem;
+  border: 1.5px solid currentColor;
+  border-radius: .18rem;
+  content: "";
+}
+
+.icon-guide::after {
+  grid-area: 1 / 1;
+  width: .36rem;
+  height: .33rem;
+  border-block: 1.5px solid currentColor;
+  content: "";
+}
+
+.status {
+  margin: 1.25rem 0 0;
+  color: var(--muted);
+  text-align: center;
+  line-height: 1.5;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .link { transition: none; }
+}

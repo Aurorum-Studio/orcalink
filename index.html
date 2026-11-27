@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="color-scheme" content="dark">
+  <meta name="referrer" content="no-referrer">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'self'; style-src 'self'; img-src 'self' https:; connect-src 'self' https://raw.githubusercontent.com; base-uri 'none'; form-action 'none'; object-src 'none'">
+  <meta name="description" content="All your links, managed in one GitHub file.">
+  <meta name="orcalink-config" content="./orcalink.json">
+  <meta name="theme-color" content="#091218">
+  <title>OrcaLink</title>
+  <link rel="stylesheet" href="./style.css">
+  <script src="./app.js" type="module"></script>
+</head>
+<body>
+  <main class="page">
+    <p id="status" class="status" role="status" hidden>Loading links…</p>
+    <noscript><p class="status">Enable JavaScript to view this page.</p></noscript>
+    <div id="profile" hidden>
+      <header class="profile">
+        <div id="cover-frame" class="cover" hidden>
+          <img id="cover" alt="" referrerpolicy="no-referrer">
+        </div>
+        <div class="profile-info">
+          <div class="avatar" aria-hidden="true">
+            <span id="initial"></span>
+            <img id="avatar" alt="" referrerpolicy="no-referrer" hidden>
+          </div>
+          <h1 id="name"></h1>
+          <p id="bio" hidden></p>
+        </div>
+      </header>
+      <nav id="link-nav" aria-label="Links" hidden>
+        <ul id="links" class="links" role="list"></ul>
+      </nav>
+      <p id="empty" class="status" hidden>No links have been added.</p>
+    </div>
+  </main>
+</body>
+</html>

@@ -1,0 +1,26 @@
+{
+  "version": 1,
+  "name": "OrcaLink",
+  "bio": "All your links, managed in one GitHub file.",
+  "cover": "./assets/salish-sea.webp",
+  "links": [
+    {
+      "title": "GitHub Pages",
+      "description": "Host your own OrcaLink page from a repository",
+      "icon": "globe",
+      "url": "https://docs.github.com/en/pages/getting-started-with-github-pages/configuring-a-publishing-source-for-your-github-pages-site"
+    },
+    {
+      "title": "View configuration",
+      "description": "Open the JSON file that powers this page",
+      "icon": "code",
+      "url": "./orcalink.json"
+    },
+    {
+      "title": "Setup guide",
+      "description": "Configure, deploy, or extend OrcaLink",
+      "icon": "guide",
+      "url": "./README.md"
+    }
+  ]
+}
